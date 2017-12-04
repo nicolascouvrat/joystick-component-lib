@@ -10,7 +10,7 @@ export default class App extends React.Component {
         neutralPointX={100}
         neutralPointY={100}
         length={50}
-        shape={'circular'}
+        shape={'horizontal'}
       />
     );
   }
