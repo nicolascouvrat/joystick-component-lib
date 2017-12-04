@@ -36,5 +36,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-native": "^0.50.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1"
   }
 }

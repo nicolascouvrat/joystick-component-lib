@@ -1,16 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 //import { CustomView } from '../lib/index'
-import { Joystick1D } from 'component-lib';
+import { Joystick } from 'component-lib';
 
 export default class App extends React.Component {
   render() {
     return (
-      <Joystick1D
-        left={100}
-        top={100}
-        mainDimension={50}
-        shape={'horizontal'}
+      <Joystick
+        neutralPointX={100}
+        neutralPointY={100}
+        length={50}
+        shape={'circular'}
       />
     );
   }
