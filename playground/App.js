@@ -1,16 +1,30 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 //import { CustomView } from '../lib/index'
-import { Joystick } from 'component-lib';
+import { Joystick, TouchEventDemuxer, DummyElement } from 'component-lib';
+
+const Demuxer = TouchEventDemuxer([DummyElement, DummyElement]);
 
 export default class App extends React.Component {
   render() {
     return (
-      <Joystick
-        neutralPointX={100}
-        neutralPointY={100}
-        length={50}
-        shape={'horizontal'}
+      <Demuxer
+        childrenProps={[
+          {
+            top: 100,
+            left: 100,
+            height: 50,
+            width: 50,
+            name: 'compo 1'
+          },
+          {
+            top: 200,
+            left: 200,
+            height: 50,
+            width: 50,
+            name: 'compo 2'
+          }
+        ]}
       />
     );
   }
