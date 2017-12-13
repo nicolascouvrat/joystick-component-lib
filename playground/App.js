@@ -1,34 +1,35 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 //import { CustomView } from '../lib/index'
-import { Joystick, TouchEventDemuxer, DummyElement } from 'component-lib';
+import { JoystickDemuxed, TouchEventDemuxer, DummyElement } from 'component-lib';
 
-const Demuxer = TouchEventDemuxer([DummyElement, DummyElement]);
+const Demuxer = TouchEventDemuxer([JoystickDemuxed, JoystickDemuxed]);
 
 export default class App extends React.Component {
   render() {
+    console.log(JoystickDemuxed.prototype)
     return (
       <Demuxer
         childrenProps={[
           {
-            top: 100,
-            left: 100,
-            height: 50,
-            width: 50,
-            name: 'compo 1'
+            neutralPointX: 100,
+            neutralPointY: 100,
+            length: 75,
+            shape: 'circular'
           },
           {
-            top: 200,
-            left: 200,
-            height: 50,
-            width: 50,
-            name: 'compo 2'
-          }
+            neutralPointX: 200,
+            neutralPointY: 300,
+            length: 50,
+            shape: 'vertical'
+          },
         ]}
       />
+
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
