@@ -16,7 +16,7 @@ export default class App extends React.Component {
             neutralPointY: 100,
             length: 75,
             shape: 'circular',
-            //isSticky: true,
+            isSticky: true,
           },
           {
             neutralPointX: 200,
