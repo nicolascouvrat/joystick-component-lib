@@ -8,7 +8,7 @@ var config = {
   },
   getBlacklistRE() {
     return blacklist([
-      /[/\\]home[/\\]nicolas[/\\]personal_projects[/\\]react_stuff[/\\]component-lib[/\\]node_modules[/\\]react-native[/\\].*/
+      /[/\\]home[/\\]nicolas[/\\]personal_projects[/\\]react_stuff[/\\]joystick-component-lib[/\\]node_modules[/\\]react-native[/\\].*/
     ]);
   },
   getProjectRoots() {
@@ -17,7 +17,7 @@ var config = {
       path.resolve(__dirname),
 
       // Include your forked package as a new root.
-      path.resolve('/home/nicolas/personal_projects/react_stuff/component-lib')
+      path.resolve('/home/nicolas/personal_projects/react_stuff/joystick-component-lib')
     ];
   }
 };

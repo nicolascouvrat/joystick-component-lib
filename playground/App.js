@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-//import { CustomView } from '../lib/index'
+
 import { JoystickDemuxed, TouchEventDemuxer, DummyElement } from 'component-lib';
 
 const Demuxer = TouchEventDemuxer([JoystickDemuxed, JoystickDemuxed]);
