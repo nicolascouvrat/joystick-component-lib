@@ -2,3 +2,4 @@ babelrc
 lib
 playground
 CODE_OF_CONDUCT.md
+*.tgz
