@@ -1,6 +1,6 @@
-#joystick-component-lib
+# joystick-component-lib
 
-Library for a custom joystick component and its TouchEventDemuxer.
+Library containing a custom joystick component and its TouchEventDemuxer, that allows for several joysticks to be moved _simultaneously_.
 
 Contains:
 
@@ -18,7 +18,6 @@ React Native's touch event management is such that only **one** responder can be
 import React from 'React';
 import { TouchEventDemuxer, JoystickDemuxed } from 'joystick-component-lib';
 
-// assuming MyComponent is a correctly defined React Native Component
 const componentArray = [JoystickDemuxed, JoystickDemuxed];
 DoubleJoystick = TouchEventDemuxer(componentArray);
 
@@ -58,6 +57,8 @@ To be compatible with `TouchEventDemuxer`, children components must implement th
 ## Joystick Component
 
 Simple, retro-style joystick than can be take either a vertical, circular or horizontal shape.
+
+![Alt text](img/double_joystick_appearance.png?raw=true "Horizontal and vertical joysticks")
 
 ### Main or Required Props
 
