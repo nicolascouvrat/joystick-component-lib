@@ -8,6 +8,17 @@ Contains:
 * `TouchEventDemuxer`: a high order component that intercepts touch events and dispatches them to its children, allowing for several components being moved simultaneously
 * `JoystickDemuxed`: A wrapper for `Joystick`, making it compatible with `TouchEventDemuxer`
 
+To use it, simply
+```
+npm install joystick-component-lib
+```
+Then import it in your project
+```javascript
+import { Joystick } from 'joystick-component-lib';
+
+// ...
+```
+
 ## TouchEventDemuxer
 
 React Native's touch event management is such that only **one** responder can be active at a time. While this is usually beneficial, effectively shutting down 'unwanted' touches when an action in ongoing, it can be a nuisance when trying to have several objects manipulable _at the same time_ (such as being able to move a second joystick without releasing the first one). `TouchEventDemuxer` is a solution to this problem, that intercepts all touch events happening in its children, analyzes them before dispatching them to the right owner.
