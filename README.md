@@ -100,3 +100,13 @@ The default appearance is fully customizable through the props **draggableStyle*
 High order component that adds a functional layer to the `Joystick` component in order to make it compatible with `TouchEventDemuxer`. Properties are roughly identical to the regular `Joystick` component, with a few differences:
 
 * `onDraggableMove`, `onDraggableStart` and `onDraggableRelease` are replaced with the unique `onJoystickMove` that is triggered on start, move and release with `(xRatio, yRatio)`; where `xRatio = relative displacement / length value` (and similarly for `yRatio`) and thus takes values between -1 and 1
+
+## Modifications & Development
+
+If you wish to edit and modify this library, please feel free! Simply clone this repository, and run `npm install`.
+
+### Playground Expo application
+
+A "playground" (expo application to test out changes) is available, with a special launch script to make the expo launcher work with simlinks as long as the packages simlinked are include in the `package.json` project dependencies.
+
+To use it, go to the `playground/` folder, then `npm install` it. You can go back to the root folder and `npm link`, then go to `playground/` and `npm link joystick-component-lib`. After having checked that `joystick-component-lib` is indeed listed as a dependency in `package.json`, launch the app using `node react-native-start-with-link.js`.
